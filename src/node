@@ -1,0 +1,5 @@
+npm -v
+
+npm i -g npm
+
+npm -v
