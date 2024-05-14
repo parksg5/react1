@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
+function MyBox({ message }) {
+  return <div>{message}</div>;
+}
+
+function MySection({ message }) {
+  return <MyBox message={message} />;
+}
+
+function MyContaniner({ message }) {
+  return <MySection message={message} />;
+}
+
+//context
+//https://react.dev/learn/passing-data-deeply-with-context
 function App(props) {
-  return <div></div>;
+  const [message, setMessage] = useState("");
+  return (
+    <div>
+      <input type="text" onChange={(e) => setMessage(e.target.value)} />
+      <MyContaniner />
+    </div>
+  );
 }
 
 export default App;
