@@ -6,7 +6,9 @@ function App(props) {
     axios.get("/api/main42/sub1").then((param) => console.log(param.data));
   }
 
-  function handleClick2() {}
+  function handleClick2() {
+    axios.get("/api/main42/sub2").then((param) => console.log(param.data));
+  }
 
   return (
     <div>
