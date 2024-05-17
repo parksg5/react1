@@ -18,16 +18,9 @@ function SpringRoot() {
         }}
       >
         <div>
-          {/* a 태그 대신 Link 컴포넌트 사용하기 */}
-          <a href="/spring/learn">LEARN</a>
+          <Link to="/spring">HOME</Link>
         </div>
-        <div>
-          <a href="/spring/api">API</a>
-        </div>
-        <div>
-          <a href="/spring/doc">DOC</a>
-        </div>
-
+        {/* a 태그 대신 Link 컴포넌트 사용하기 */}
         <div>
           <Link to="/spring/learn">LEARN</Link>
         </div>
@@ -51,6 +44,7 @@ const router = createBrowserRouter([
     path: "spring",
     element: <SpringRoot />,
     children: [
+      { index: true, element: <div>spring main page</div> },
       { path: "api", element: <div>api page</div> },
       { path: "doc", element: <div>doc page</div> },
       { path: "learn", element: <div>learn page</div> },
